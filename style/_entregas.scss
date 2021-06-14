@@ -1,0 +1,61 @@
+@import './variaveis';
+.entregas {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 80px 0;
+    &-info {
+        flex: 1 1 260px;
+        & h2 {
+            font-size: rem(44);
+            line-height: 1.4;
+            margin: rem(15) 0;
+        }
+        & p {
+            max-width: 450px;
+            line-height: 1.5;
+            color: $ligthgray-primary;
+            margin: 10px 0;
+        }
+    }
+    &-img {
+        flex: 1 1 260px;
+        transform: translateY(40px)
+    }
+}
+
+svg #drone {
+    animation: animate-drone 2s ease infinite alternate;
+}
+
+svg #sombra-drone {
+    animation: animate-sombra 2s ease infinite alternate;
+}
+
+@keyframes animate-drone {
+    from {
+        transform: translate3d(0, -8px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes animate-sombra {
+    from {
+        transform: translate3d(0, 8px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        fill: #c5c5c5;
+    }
+}
+
+@media (max-width: 600px) {
+    .entregas {
+        margin: rem(10) rem(30);
+    }
+}

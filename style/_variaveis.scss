@@ -1,0 +1,12 @@
+$font-nunito: 'Nunito',
+Helvetica,
+sans-serif;
+$blue-primary: #2c70ff;
+$purple-primary: #7744d9;
+$black-primary: #222222;
+$ligthgray-primary: #7c7c7c;
+$ligthgray-secondary: #a4a4a4;
+;
+@function rem($size) {
+    @return $size / 16+rem;
+}

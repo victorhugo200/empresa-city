@@ -1,0 +1,111 @@
+@import './variaveis';
+.startup {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border-top: 2px solid $purple-primary;
+    border-bottom: 2px solid $purple-primary;
+    padding: 90px 0 120px 0px;
+    &-info {
+        flex: 1 1 260px;
+        & h2 {
+            font-size: rem(44);
+            line-height: 1.4;
+            margin: rem(15) 0;
+        }
+        & p {
+            max-width: 450px;
+            line-height: 1.5;
+            color: $ligthgray-primary;
+            margin: 10px 0;
+        }
+    }
+    &-img {
+        flex: 1 1 260px;
+        transform: translateY(40px)
+    }
+}
+
+@media (max-width: 600px) {
+    svg {
+        width: 100%;
+        transform: translateY(0)
+    }
+}
+
+svg #startup1 #parte1 #parte2 #foguete {
+    animation: foguete 1s infinite alternate;
+    transition: 1s ease;
+}
+
+svg #startup1 #parte1 #parte2 #rect-1 {
+    animation: rectPrimary 1s ease-in infinite alternate;
+    transition: 1s ease-in;
+    animation-delay: .2s;
+}
+
+svg #startup1 #parte1 #parte2 #rect-2 {
+    animation: rectPrimary .7s ease-in infinite alternate;
+    transition: .7s ease-in;
+}
+
+svg #startup1 #parte1 #parte2 #rect-3 {
+    animation: rectPrimary 2s ease-in infinite alternate;
+    transition: 2s ease-in;
+}
+
+svg #startup1 #parte1 #parte2 #rect-4 {
+    animation: rectPrimary 4s ease-in infinite alternate;
+    transition: 4s ease-in;
+}
+
+svg #startup1 #parte1 #parte2 #Vector_67 {
+    animation: animate-hamb 1s ease-in infinite alternate;
+    transition: 1s ease-in;
+}
+
+svg #startup1 #parte1 #parte2 #Vector_69 {
+    animation: animate-hamb .5s ease-in infinite alternate;
+    transition: .5s ease-in;
+}
+
+svg #startup1 #parte1 #parte2 #Vector_71 {
+    animation: animate-hamb 3s ease-in infinite alternate;
+    transition: 3s ease-in;
+}
+
+@keyframes foguete {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -15px, 0);
+    }
+}
+
+@keyframes rectPrimary {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes animate-hamb {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@media (max-width: 600px) {
+    .startup {
+        margin: rem(10) rem(30);
+    }
+}

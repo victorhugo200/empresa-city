@@ -1,0 +1,35 @@
+@import './variaveis';
+.sobre {
+    padding: rem(60) 0;
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &-info {
+        flex: 1 1 260px;
+        margin-right: rem(30);
+        & h1 {
+            font-size: rem(44);
+            margin-bottom: rem(10);
+        }
+        & p {
+            max-width: 450px;
+            line-height: 1.5;
+            color: $ligthgray-primary;
+            margin: 10px 0;
+        }
+        &-img {
+            flex: 1 1 260px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .sobre {
+        margin: rem(20) rem(30);
+        &-info {
+            margin-right: 0;
+        }
+    }
+}

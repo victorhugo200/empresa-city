@@ -1,0 +1,10 @@
+@import './variaveis';
+.footer {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: $purple-primary;
+    padding: 20px;
+    margin-top: rem(80);
+}

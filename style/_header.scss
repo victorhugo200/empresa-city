@@ -1,0 +1,38 @@
+@import './variaveis';
+.header {
+    background-color: $purple-primary;
+    &-container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        .logo a {
+            font-size: rem(40);
+            font-weight: bold;
+            color: white;
+        }
+        .menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            & li a {
+                padding: 10px;
+                color: white;
+                &:hover {
+                    color: $ligthgray-primary;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 10px 5px;
+    }
+    .logo {
+        margin-bottom: 30px;
+    }
+}
