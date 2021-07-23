@@ -18,10 +18,10 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li class="menu-1"><a href="#">Home</a></li>
+                    <li class="menu-2"><a href="#">Projetos</a></li>
+                    <li  class="menu-3"><a href="#">Produtos</a></li>
+                    <li  class="menu-4"><a href="#">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +38,7 @@
         </div>
     </main>
 
-    <section class="startup">
+    <section class="startup" id="startup">
         <div class="startup-info">
             <h2>Projetos</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, laboriosam exercitationem! Saepe autem est nesciunt atque fuga, ex at velit odio facilis, voluptatibus odit, quo laborum praesentium facere aspernatur reiciendis.</p>
@@ -185,7 +185,7 @@
             <h2>Produtos</h2>
         </div>
         <div class="produtos-content">
-            <div class="produto">
+            <div class="produto produto-1">
                 <div class="produto-img">
                     <img src="img/icon-aviao.svg" alt="">
                 </div>
@@ -193,7 +193,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quibusdam illo consequatur. Non doloremque minima optio cumque culpa eveniet cum</p>
                 <a href="#" class="btn-comprar btn1">Saiba mais</a>
             </div>
-            <div class="produto">
+            <div class="produto produto-2">
                 <div class="produto-img">
                     <img src="img/icon-aviao.svg" alt="">
                 </div>
@@ -201,7 +201,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quibusdam illo consequatur. Non doloremque minima optio cumque culpa eveniet cum, aliquid deserunt dolor animi officiis dignissimos nobis rem nihil nostrum.</p>
                 <a href="#" class="btn-comprar btn2">Saiba mais</a>
             </div>
-            <div class="produto">
+            <div class="produto produto-3">
                 <div class="produto-img">
                     <img src="img/icon-aviao.svg" alt="">
                 </div>
@@ -546,6 +546,165 @@
     <footer class="footer">
         <p>Desenvolvido por Victor Hugo - Todos os direitos reservados</p>
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            var tl = gsap.timeline();
+            console.log('executou');
+
+            tl
+            .from(".logo", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.1,
+                ease: "power3.out",
+            })
+            .from(".menu-1", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.1,
+                ease: "power3.out",
+            })
+            .from(".menu-2", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.1,
+                ease: "power3.out",
+            }, "-=0.8")
+            .from(".menu-3", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.1,
+                ease: "power3.out",
+            }, "-=0.8")
+            .from(".menu-4", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.1,
+                ease: "power3.out",
+            }, "-=0.8")
+            .from(".menu-5", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.1,
+                ease: "power3.out",
+            }, "-=0.8")
+            .from(".sobre-info", {
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+            }, "-=0.8")
+            .from(".sobre-info-img", {
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                ease: "power3.out",
+            }, "-=0.8")
+
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from("#startup .startup-info",{
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#startup",
+
+                }
+            });
+            gsap.from("#startup .startup-img",{
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.3},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#startup",
+
+                }
+            });
+
+            gsap.from(".produto-1 ",{
+                duration: 0.2,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".produto-1",
+
+                }
+            });
+
+            gsap.from(".produto-2 ",{
+                duration: 0.5,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".produto-2",
+
+                }
+            });
+
+            gsap.from(".produto-3 ",{
+                duration: 0.6,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".produto-3",
+
+                }
+            });
+
+
+            gsap.from(".entregas-info ",{
+                duration: 0.3,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".entregas-info",
+
+                }
+            });
+
+            gsap.from(".entregas-img ",{
+                duration: 0.5,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".entregas-img",
+
+                }
+            });
+        })
+
+    </script>
+
 </body>
 
 </html>
