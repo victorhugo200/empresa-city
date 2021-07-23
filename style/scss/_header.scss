@@ -20,9 +20,26 @@
             & li a {
                 padding: 10px;
                 color: white;
-                &:hover {
-                    color: $ligthgray-primary;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    background-color: white;
+                    width: 0;
+                    right: 0;
+                    left: 10%;
+                    height: 0;
+                    transition: .3s ease;
                 }
+
+                &:hover {
+                    &::after {
+                        width: 80%;
+                        height: 2px;
+                    }
+                }
+        
             }
         }
     }
